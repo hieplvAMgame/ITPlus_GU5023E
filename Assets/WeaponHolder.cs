@@ -6,6 +6,7 @@ public class WeaponHolder : MonoBehaviour
 {
     public Transform target;
     public float rotateSpeed;
+    public Vector3 offset;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,14 @@ public class WeaponHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion diff = Quaternion.LookRotation( target.position - transform.position);
+        if (target != null)
+        {
+            Vector3 dir = target.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Quaternion diff = Quaternion.Euler(new Vector3(0, 0, angle+offset.z));
         transform.localRotation = Quaternion.Slerp(transform.rotation, diff, rotateSpeed * Time.deltaTime);
+        }
+        else
+            Debug.LogError("You must have a target");
     }
 }
