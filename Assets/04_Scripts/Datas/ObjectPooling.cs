@@ -7,7 +7,7 @@ public class ObjectPooling : MonoBehaviour
     public static ObjectPooling instance;
 
     public List<GameObject> listObjectToPool = new List<GameObject>();      // list prefab for pooling
-    public int size;        // size of pool
+    public int sizeOfPool;        // size of pool
     Dictionary<string, List<GameObject>> poolDict = new Dictionary<string, List<GameObject>>();
 
     private void Awake()
@@ -17,7 +17,7 @@ public class ObjectPooling : MonoBehaviour
             instance = this;
         }
         for (int j = 0; j < listObjectToPool.Count; j++)
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < sizeOfPool; i++)
             {
                 GameObject obj = Instantiate(listObjectToPool[j], transform);
                 obj.SetActive(false);
@@ -39,7 +39,6 @@ public class ObjectPooling : MonoBehaviour
                 int temp = i;
                 if (!poolDict[key][temp].activeInHierarchy)
                 {
-                    poolDict[key][temp].SetActive(true);
                     Debug.LogError("1");
                     return poolDict[key][temp]; 
                 }
@@ -55,7 +54,6 @@ public class ObjectPooling : MonoBehaviour
                 }
             }
             GameObject newObj = Instantiate(listObjectToPool[_index], transform);
-            newObj.SetActive(true);
             poolDict[key].Add(newObj);
             Debug.LogError("2");
             return newObj;

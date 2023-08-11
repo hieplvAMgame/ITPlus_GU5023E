@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerData : ICharacter
 {
-    public Type_Character type = Type_Character.Warrior;
+    public static PlayerData instance;
     private void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
         Setup();
     }
+    public Type_Character type = Type_Character.Warrior;
     public override void OnDead()
     {
         base.OnDead();
@@ -19,11 +24,14 @@ public class PlayerData : ICharacter
         base.Setup();
         //Hp+= currentLevel*2 + item[id].Hp;
     }
+    public override void OnTakenDamage(int amount)
+    {
+        base.OnTakenDamage(amount);
+        if (Hp <= 0)
+        {
+            //Play anim die
+            GameManager.instance.GameLose();
+        }
+    }
 }
-public enum Type_Character
-{
-    Warrior,
-    Mage,
-    Orge,
-    Dracula
-}
+
