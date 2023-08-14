@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 4ed2c3e8217b8ef4a9a47b32c7a9719a
+guid: fe00b487ae649d942a2438e2df783016
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: TilesetDungeon_0
+    second: GunsTileSet2_0
   - first:
       213: 21300002
-    second: TilesetDungeon_1
+    second: GunsTileSet2_1
   - first:
       213: 21300004
-    second: TilesetDungeon_2
+    second: GunsTileSet2_2
   - first:
       213: 21300006
-    second: TilesetDungeon_3
+    second: GunsTileSet2_3
   - first:
       213: 21300008
-    second: TilesetDungeon_4
-  - first:
-      213: 21300010
-    second: TilesetDungeon_5
-  - first:
-      213: 21300012
-    second: TilesetDungeon_6
-  - first:
-      213: 21300014
-    second: TilesetDungeon_7
+    second: GunsTileSet2_4
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -71,7 +62,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +91,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -112,7 +103,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -136,18 +127,18 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilesetDungeon_0
+      name: GunsTileSet2_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 16
-        height: 38
+        width: 22
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,13 +153,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetDungeon_1
+      name: GunsTileSet2_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 16
-        height: 38
+        x: 23
+        y: 1
+        width: 22
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,13 +174,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetDungeon_2
+      name: GunsTileSet2_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 19
-        width: 16
-        height: 16
+        x: 46
+        y: 1
+        width: 23
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,13 +195,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetDungeon_3
+      name: GunsTileSet2_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 16
-        height: 16
+        x: 70
+        y: 8
+        width: 26
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +215,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GunsTileSet2_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 6
+        width: 19
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ba1366f514926194c9e47de3d5d8416d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -235,10 +247,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TilesetDungeon_0: 21300000
-      TilesetDungeon_1: 21300002
-      TilesetDungeon_2: 21300004
-      TilesetDungeon_3: 21300006
+      GunsTileSet2_1: 21300002
+      GunsTileSet2_3: 21300006
+      GunsTileSet2_4: 21300008
+      GunsTileSet2_0: 21300000
+      GunsTileSet2_2: 21300004
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

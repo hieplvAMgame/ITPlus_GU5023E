@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: 4ed2c3e8217b8ef4a9a47b32c7a9719a
+guid: 3941776669d86e94db13533e27454044
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 21300000
-    second: TilesetDungeon_0
+    second: WeaponsNew_0
   - first:
       213: 21300002
-    second: TilesetDungeon_1
+    second: WeaponsNew_1
   - first:
       213: 21300004
-    second: TilesetDungeon_2
+    second: WeaponsNew_2
   - first:
       213: 21300006
-    second: TilesetDungeon_3
+    second: WeaponsNew_3
   - first:
       213: 21300008
-    second: TilesetDungeon_4
+    second: WeaponsNew_4
   - first:
       213: 21300010
-    second: TilesetDungeon_5
+    second: WeaponsNew_5
   - first:
       213: 21300012
-    second: TilesetDungeon_6
+    second: WeaponsNew_6
   - first:
       213: 21300014
-    second: TilesetDungeon_7
+    second: WeaponsNew_7
+  - first:
+      213: 21300016
+    second: WeaponsNew_8
+  - first:
+      213: 21300018
+    second: WeaponsNew_9
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -71,7 +77,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 11
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +106,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -112,7 +118,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -136,20 +142,20 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilesetDungeon_0
+      name: WeaponsNew_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 16
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 8
+        width: 22
+        height: 69
+      alignment: 9
+      pivot: {x: 0.475428, y: 0.37072942}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,15 +168,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetDungeon_1
+      name: WeaponsNew_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 16
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 3
+        width: 34
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5317992, y: 0.36485353}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,15 +189,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetDungeon_2
+      name: WeaponsNew_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 19
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 60
+        y: 7
+        width: 30
+        height: 64
+      alignment: 9
+      pivot: {x: 0.65316594, y: 0.34796023}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,15 +210,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetDungeon_3
+      name: WeaponsNew_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 94
+        y: 8
+        width: 22
+        height: 58
+      alignment: 9
+      pivot: {x: 0.61057454, y: 0.29495022}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,10 +230,136 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: WeaponsNew_4
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 6
+        width: 28
+        height: 66
+      alignment: 9
+      pivot: {x: 0.57722694, y: 0.25427923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponsNew_5
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 10
+        width: 46
+        height: 69
+      alignment: 9
+      pivot: {x: 0.6586503, y: 0.42165413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponsNew_6
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 6
+        width: 19
+        height: 64
+      alignment: 9
+      pivot: {x: 0.61380726, y: 0.2761638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponsNew_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 8
+        width: 30
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5900981, y: 0.37099627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponsNew_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2
+        width: 27
+        height: 67
+      alignment: 9
+      pivot: {x: 0.64015144, y: 0.34266537}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WeaponsNew_9
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 8
+        width: 20
+        height: 58
+      alignment: 9
+      pivot: {x: 0.6621765, y: 0.2809696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ba1366f514926194c9e47de3d5d8416d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -235,10 +367,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TilesetDungeon_0: 21300000
-      TilesetDungeon_1: 21300002
-      TilesetDungeon_2: 21300004
-      TilesetDungeon_3: 21300006
+      WeaponsNew_2: 21300004
+      WeaponsNew_1: 21300002
+      WeaponsNew_6: 21300012
+      WeaponsNew_0: 21300000
+      WeaponsNew_3: 21300006
+      WeaponsNew_8: 21300016
+      WeaponsNew_7: 21300014
+      WeaponsNew_5: 21300010
+      WeaponsNew_9: 21300018
+      WeaponsNew_4: 21300008
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
