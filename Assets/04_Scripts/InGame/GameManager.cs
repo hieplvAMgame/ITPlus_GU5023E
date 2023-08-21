@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour,IGameSubcriber
 {
     public static GameManager instance;
+
+    public LevelGeneration genLevel;
     public GAME_STATE state;
     #region GameState Method
     public void GameLose()
@@ -20,6 +22,9 @@ public class GameManager : MonoBehaviour,IGameSubcriber
     public void GamePrepare()
     {
         Debug.Log("Call Prepare");
+        genLevel.GenerateLevel();
+        //Keo data tu user data -> Player
+        //Gen Player
         listSubcriber.ForEach(x => x.GamePrepare());
     }
 

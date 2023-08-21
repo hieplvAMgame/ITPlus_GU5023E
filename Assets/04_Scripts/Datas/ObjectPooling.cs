@@ -39,7 +39,6 @@ public class ObjectPooling : MonoBehaviour
                 int temp = i;
                 if (!poolDict[key][temp].activeInHierarchy)
                 {
-                    Debug.LogError("1");
                     return poolDict[key][temp]; 
                 }
             }
@@ -55,7 +54,6 @@ public class ObjectPooling : MonoBehaviour
             }
             GameObject newObj = Instantiate(listObjectToPool[_index], transform);
             poolDict[key].Add(newObj);
-            Debug.LogError("2");
             return newObj;
         }
         return null;

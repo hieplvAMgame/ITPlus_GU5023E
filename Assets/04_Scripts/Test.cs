@@ -7,7 +7,7 @@ public class Test : MonoBehaviour
 {
     private NavMeshAgent agent;
     public Transform target;
-    public Transform startPoint, endPoint;
+    //public Transform startPoint, endPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,18 +20,18 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(PlayerData.instance.transform.position, transform.position) <= 5)
-        {
-            agent.enabled = true;
+    //    if (Vector2.Distance(PlayerData.instance.transform.position, transform.position) <= 5)
+    //    {
+    //        agent.enabled = true;
             agent.SetDestination(target.position);
-        }
-        else
-        {
-            Patrol();
-        }
-    }
-    private void Patrol()
-    {
+    //    }
+    //    else
+    //    {
+    //        Patrol();
+    //    }
+    //}
+    //private void Patrol()
+    //{
 
     }
 }
