@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerData : ICharacter
 {
+    public float range;
+    public FOV fov;
     public static PlayerData instance;
     private void Awake()
     {
@@ -22,6 +24,7 @@ public class PlayerData : ICharacter
     public override void Setup()
     {
         base.Setup();
+        //fov.SetupRange(range);
         //Hp+= currentLevel*2 + item[id].Hp;
     }
     public override void OnTakenDamage(int amount)

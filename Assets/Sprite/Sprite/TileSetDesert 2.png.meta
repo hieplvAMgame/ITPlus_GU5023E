@@ -65,7 +65,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 14
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -91,7 +91,7 @@ TextureImporter:
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -295,13 +295,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileSetDesert 2_8: 21300012
-      TileSetDesert 2_1: 21300002
-      TileSetDesert 2_4: 21300008
-      TileSetDesert 2_2: 21300004
       TileSetDesert 2_0: 21300000
+      TileSetDesert 2_1: 21300002
+      TileSetDesert 2_2: 21300004
       TileSetDesert 2_3: 21300006
+      TileSetDesert 2_4: 21300008
       TileSetDesert 2_5: 21300010
+      TileSetDesert 2_8: 21300012
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

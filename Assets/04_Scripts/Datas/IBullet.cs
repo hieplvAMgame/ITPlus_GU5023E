@@ -10,6 +10,13 @@ public class IBullet : MonoBehaviour
     public Transform target;
     //public Transform parentTrans;
     public bool canMove = false;
+    /// <summary>
+    /// Set up every bullet
+    /// </summary>
+    /// <param name="_damage"> damage of bullet</param>
+    /// <param name="_target">Transform of target for make bullet move toward it</param>
+    /// <param name="_parentTrans">Transform parent of bullet</param>
+    /// <param name="_tagOrigin">Tag's Object shoot this bullet</param>
     public virtual void Setup(int _damage, Transform _target, Transform _parentTrans, string _tagOrigin)
     {
         damage = _damage;

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour, IGameSubcriber
     public WeaponHolder holder;
     private void Start()
     {
-        GameManager.instance.AddSubcriber(this);
+        //GameManager.instance.AddSubcriber(this);
     }
     private void Update()
     {
