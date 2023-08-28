@@ -6,18 +6,18 @@ using UnityEngine;
 public class FOV : MonoBehaviour
 {
     public float radius;
-    private CircleCollider2D col;
+    //private CircleCollider2D col;
     public List<GameObject> enemies = new List<GameObject>();
     public Collider2D[] result;
 
     private void Awake()
     {
-        col = GetComponent<CircleCollider2D>();
+        //col = GetComponent<CircleCollider2D>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        SetupRange(50);
+        //SetupRange(50);
     }
     List<Collider2D> cols;
     // Update is called once per frame
@@ -26,11 +26,11 @@ public class FOV : MonoBehaviour
         result = Physics2D.OverlapCircleAll(transform.position, radius, LayerMask.GetMask("Enemy"));
     }
 
-    public void SetupRange(float range)
-    {
-        radius = range;
-        col.radius = radius;
-    }
+    //public void SetupRange(float range)
+    //{
+    //    radius = range;
+    //    col.radius = radius;
+    //}
     public Transform GetClosestTarget()
     {
         float dis = Mathf.Infinity;
@@ -49,6 +49,7 @@ public class FOV : MonoBehaviour
         }
         return _result;
     }
+
     //private void OnTriggerEnter2D(Collider2D other)
     //{
     //    if (other.CompareTag(GAME_TAG.Enemy))

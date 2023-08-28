@@ -34,7 +34,7 @@ public class IBullet : MonoBehaviour
     {
         if (col.gameObject.CompareTag(GAME_TAG.Player) && tagOrigin.Equals(GAME_TAG.Enemy))
         {
-            PlayerData.instance.OnTakenDamage(damage);
+            PlayerController.Instance.playerData.OnTakenDamage(damage);
             Debug.Log("SHOOT PLAYER");
             gameObject.SetActive(false);
         }

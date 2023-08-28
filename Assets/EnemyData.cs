@@ -1,11 +1,21 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyData : MonoBehaviour
+public class EnemyData : ICharacter
 {
-    public void SetupEnemy(string message)
+    public AIDestinationSetter destination;
+
+    public override void Setup()
     {
-        Debug.Log(message);
+        base.Setup();
+        // Set speed
+        // Set Acceleration
+        destination.target = PlayerController.Instance.transform;
+    }
+    private void Update()
+    {
+        this.GetComponent<AIPath>().enabled = PlayerController.Instance.isStart;
     }
 }

@@ -18,6 +18,7 @@ public class WeaponHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerController.Instance.isStart) return;
         SetTarget();
         time += Time.deltaTime;
         if (time > 1&&target!=null)
@@ -28,7 +29,7 @@ public class WeaponHolder : MonoBehaviour
     }
     private void SetTarget()
     {
-        target = PlayerData.instance.fov.GetClosestTarget();
+        target = PlayerController.Instance.playerData.fov.GetClosestTarget();
         if (target != null)
         {
             Vector3 dir = target.position - transform.position;

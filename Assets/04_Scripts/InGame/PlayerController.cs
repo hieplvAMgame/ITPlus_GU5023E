@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, IGameSubcriber
+public class PlayerController : Singleton<PlayerController>, IGameSubcriber
 {
     public Animator anim;
     public Rigidbody2D rb;
     public float moveSpeed;
+    public SpriteRenderer spriteRenderer;
 
     private Vector3 dir, vel;
     private float x, y;
@@ -14,11 +15,13 @@ public class PlayerController : MonoBehaviour, IGameSubcriber
     private const string Ver = "Vertical";
     private const string Move = "isMove";
 
-    private bool isStart = false;
+    public bool isStart = false;
     public WeaponHolder holder;
+    public PlayerData playerData;
     private void Start()
     {
-        //GameManager.instance.AddSubcriber(this);
+        GameManager.Instance.AddSubcriber(this);
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
@@ -41,9 +44,11 @@ public class PlayerController : MonoBehaviour, IGameSubcriber
             rb.velocity = Vector2.zero;
         Animate(dir.magnitude > .1f);
         if (x > 0)
-            transform.eulerAngles = Vector3.zero;
+            //transform.eulerAngles = Vector3.zero;
+            spriteRenderer.flipX = false;
         else if (x < 0)
-            transform.eulerAngles = Vector3.up * 180;
+            //transform.eulerAngles = Vector3.up * 180;
+            spriteRenderer.flipX = true;
     }
     private void Animate(bool isMove)
     {
@@ -57,7 +62,7 @@ public class PlayerController : MonoBehaviour, IGameSubcriber
         {
             Debug.Log("SHOOT");
             bulletTemp = ObjectPooling.instance.GetObjectFromPool(TYPE_BULLET.NormalBullet);
-            bulletTemp.GetComponent<NormalBullet>().Setup(PlayerData.instance.Damage,
+            bulletTemp.GetComponent<NormalBullet>().Setup(playerData    .Damage,
                 holder.target, holder.listSpawnBullet[0], gameObject.tag);
             bulletTemp.SetActive(true);
         }
@@ -66,6 +71,8 @@ public class PlayerController : MonoBehaviour, IGameSubcriber
     public void GamePrepare()
     {
         Debug.Log("Prepare Player");
+        transform.position = GameManager.Instance.genLevel.listLevel[0].posPlayer;
+        playerData.Setup();
         isStart = false;
     }
 

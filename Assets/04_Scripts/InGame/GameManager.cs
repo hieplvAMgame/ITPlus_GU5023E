@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour,IGameSubcriber
+public class GameManager : Singleton<GameManager>,IGameSubcriber
 {
-    public static GameManager instance;
-
     public LevelGeneration genLevel;
     public GAME_STATE state;
+    private void Start()
+    {
+        GamePrepare();
+    }
     #region GameState Method
     public void GameLose()
     {
@@ -54,12 +56,6 @@ public class GameManager : MonoBehaviour,IGameSubcriber
     {
         listSubcriber.Remove(sub);
     }
-    private void Awake()
-    {
-        if (instance == null)
-            instance = this;
-    }
-
     public void Check()
     {
         switch (state)

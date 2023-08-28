@@ -16,11 +16,11 @@ public class LevelGeneration : MonoBehaviour
     public void GenerateLevel()
     {
         // check level nao
-        transEnemies.ForEach(x =>
+        listLevel[0].listPosEnemies.ForEach(x =>
         {
             GameObject o = ObjectPooling.instance.GetObjectFromPool("Enemy");
-            o.transform.position = x.position;
-            o.GetComponent<EnemyData>().SetupEnemy(x.name + " set pos enemy");
+            o.transform.position = x;
+            o.GetComponent<EnemyData>().Setup();
             o.SetActive(true);
         });
     }
