@@ -8,5 +8,6 @@ public class CharacterScriptableObj : ScriptableObject
     public int hp;
     public int defend;
     public int damage;
+    [Range(0,100)]
     public int luckyRate;
 }

@@ -14,4 +14,13 @@ public class GlobalData : MonoBehaviour
         get => PlayerPrefs.GetInt("IsVibrate", 1) == 1;
         set => PlayerPrefs.SetInt("IsVibrate", value ? 1 : 0);
     }
+    public float SoundValue
+    {
+        get => PlayerPrefs.GetFloat("SoundValue", 0);
+        set
+        {
+            Debug.LogError("SOUND VALUE = " + value);
+            PlayerPrefs.SetFloat("SoundValue", value);
+        }
+    }
 }

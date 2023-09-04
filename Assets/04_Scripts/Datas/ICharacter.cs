@@ -36,7 +36,7 @@ public class ICharacter : MonoBehaviour
         set => luckyRate = value;
     }
     /// <summary>
-    /// Setup character, like hp, damage,...
+    /// Setup babe info of character, like hp, damage,...
     /// </summary>
     public virtual void Setup()
     {

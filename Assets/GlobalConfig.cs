@@ -6,6 +6,6 @@ public class GlobalConfig : MonoBehaviour
 {
     private void Awake()
     {
-        SceneLoader.Instance.LoadScene(1);
+        SceneLoader.Instance.LoadScene("Level1", ()=>GameManager.Instance.GamePrepare());
     }
 }

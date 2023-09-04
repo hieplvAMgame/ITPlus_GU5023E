@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : Singleton<PlayerController>, IGameSubcriber
 {
@@ -18,9 +19,16 @@ public class PlayerController : Singleton<PlayerController>, IGameSubcriber
     public bool isStart = false;
     public WeaponHolder holder;
     public PlayerData playerData;
+    public Button btnStart;
+
     private void Start()
     {
         GameManager.Instance.AddSubcriber(this);
+        btnStart.onClick.AddListener(() =>
+        {
+            isStart = true;
+            btnStart.gameObject.SetActive(false);
+        });
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Update()
@@ -62,7 +70,7 @@ public class PlayerController : Singleton<PlayerController>, IGameSubcriber
         {
             Debug.Log("SHOOT");
             bulletTemp = ObjectPooling.instance.GetObjectFromPool(TYPE_BULLET.NormalBullet);
-            bulletTemp.GetComponent<NormalBullet>().Setup(playerData    .Damage,
+            bulletTemp.GetComponent<NormalBullet>().Setup(playerData.Damage,
                 holder.target, holder.listSpawnBullet[0], gameObject.tag);
             bulletTemp.SetActive(true);
         }

@@ -40,8 +40,13 @@ public class IBullet : MonoBehaviour
         }
         if (col.gameObject.CompareTag(GAME_TAG.Enemy) && tagOrigin.Equals(GAME_TAG.Player))
         {
-            col.gameObject.SetActive(false);
+            //col.gameObject.SetActive(false);
             Debug.Log("Shoot enemy");
+            col.gameObject.GetComponent<EnemyData>().OnTakenDamage(damage);
+            gameObject.SetActive(false);
+        }
+        if(col.gameObject.CompareTag(GAME_TAG.Wall))
+        {
             gameObject.SetActive(false);
         }
     }

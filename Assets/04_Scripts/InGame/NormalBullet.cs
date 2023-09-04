@@ -24,11 +24,12 @@ public class NormalBullet : IBullet
         Quaternion diff = Quaternion.Euler(new Vector3(0, 0, angle + offset.z));
         transform.localRotation = Quaternion.Slerp(transform.rotation, diff, rotateSpeed * Time.deltaTime);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Enemy"))
-        {
-            gameObject.SetActive(false);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Enemy"))
+    //    {
+    //        gameObject.SetActive(false);
+    //        //collision.gameObject.TryGetComponent<EnemyData>(out EnemyData enemyData);
+    //    }
+    //}
 }

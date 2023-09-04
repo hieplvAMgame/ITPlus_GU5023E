@@ -23,7 +23,7 @@ public class Test : MonoBehaviour
     //    if (Vector2.Distance(PlayerData.instance.transform.position, transform.position) <= 5)
     //    {
     //        agent.enabled = true;
-            agent.SetDestination(target.position);
+            //agent.SetDestination(target.position);
     //    }
     //    else
     //    {

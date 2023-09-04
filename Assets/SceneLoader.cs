@@ -9,30 +9,32 @@ public class SceneLoader : Singleton<SceneLoader>
     public GameObject loaderUI;
     public Slider progressImage;
 
-    public void LoadScene(int sceneIndex)
+    private void Start()
     {
-        StartCoroutine(LoadSceneCoroutine(sceneIndex));
-        
+        DontDestroyOnLoad(this);
+    }
+    public void LoadScene(string sceneName, System.Action callback = null)
+    {
+        StartCoroutine(LoadSceneCoroutine(sceneName, callback));
     }
 
-    private IEnumerator LoadSceneCoroutine(int sceneIndex)
+    private IEnumerator LoadSceneCoroutine(string sceneName, System.Action callback = null)
     {
         progressImage.value = 0;
         loaderUI.SetActive(true);
-
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneIndex);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
         asyncOperation.allowSceneActivation = false;
         float progress = 0;
-        while(!asyncOperation.isDone)
+        while (!asyncOperation.isDone)
         {
-            progress = Mathf.MoveTowards(progress, asyncOperation.progress, Time.deltaTime);
-            progressImage.value = progress;
+            progressImage.value = progress/2;
             if (progress >= .9f)
             {
-                progressImage.value = 1;
+                Debug.LogError("End Load");
                 asyncOperation.allowSceneActivation = true;
             }
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
+        callback.Invoke();
     }
 }

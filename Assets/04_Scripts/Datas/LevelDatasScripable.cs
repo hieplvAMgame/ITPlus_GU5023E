@@ -7,4 +7,5 @@ public class LevelDatasScripable : ScriptableObject
 {
     public Vector3 posPlayer;
     public List<Vector3> listPosEnemies = new List<Vector3>();
+    public int valueOfWaveEnemy => listPosEnemies.Count;
 }
